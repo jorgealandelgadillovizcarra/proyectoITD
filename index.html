@@ -11,15 +11,37 @@
 <script src="scripts/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="scripts/pop-ups.js"></script>
 <script type="text/javascript" src="scripts/nav.js"></script>
+
+<script language="JavaScript"> 
+function mueveReloj(){ 
+   	momentoActual = new Date() 
+   	hora = momentoActual.getHours() 
+   	minuto = momentoActual.getMinutes() 
+   	segundo = momentoActual.getSeconds() 
+
+   	horaImprimible = hora + " : " + minuto + " : " + segundo 
+
+   	document.form_reloj.reloj.value = horaImprimible 
+
+   	setTimeout("mueveReloj()",1000) 
+} 
+</script> 
 </head>
-<body>
+<body onload="mueveReloj()"> 
+
+
+ 
 <hgroup>
-  <h1>Jorge Alan Delgadillo Vizcarra </h1><BR/>
+    
+    
+     <h1>Jorge Alan Delgadillo Vizcarra </h1><BR/>
   <H4><a href="https://www.facebook.com/">FACEBOOCK</a></H4>
   <h4><a href="http://www.youtube.com" target="_blank">YOUTUBE</a></h4>
   <h4><a href="http://https://www.instagram.com/" target="_blank">INSTAGRAM</a></h4>
   <H4><a href="https://twitter.com/?lang=es">TWITTER</a></H4>
   <H4><a href="https://www.google.com">GOOGLE</a></H4>
+  <center><form name="form_reloj" ><b>RELOJ<input type="text" name="reloj" size="10"></b></form> </center>
+  
 </hgroup>
 <nav>
   <ul id="menu" class="menu">
