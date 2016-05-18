@@ -4,12 +4,12 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Consumo', 'Porciento'],
-          ['Cafe',     60],
-          ['Cigarro',     30],
-          ['Ron',  10]
+          ['trabajo',     60],
+          ['facebook',     30],
+          ['cerveza',  10]
         ]);
          var options = {
-          title: 'Mi consumo del café, cigarro y ron',
+          title: 'Mi Grafica',
           is3D: true,};
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
         chart.draw(data, options);
